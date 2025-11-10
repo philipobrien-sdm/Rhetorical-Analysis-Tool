@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Rhetorical Analysis AI",
+  "version": "4.0",
+  "description": "An extension that uses the Gemini API to analyze the rhetorical techniques of the current page.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' https://esm.sh; object-src 'self'"
+  }
+}

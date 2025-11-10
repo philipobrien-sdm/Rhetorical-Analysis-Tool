@@ -1,0 +1,5 @@
+{
+  "name": "Rhetorical Analysis Tool v5.0",
+  "description": "An application that takes article text and uses the Gemini API to generate a JSON-formatted analysis of its rhetorical techniques and persuasive strategies.",
+  "requestFramePermissions": []
+}
