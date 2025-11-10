@@ -1,3 +1,4 @@
+
 // services/i18n.ts
 export const translations = {
     // App.tsx
@@ -35,6 +36,14 @@ export const translations = {
     },
     
     // ArticleInputForm.tsx
+    loadExampleLabel: {
+        en: 'Load an Example',
+        es: 'Cargar un Ejemplo'
+    },
+    selectExampleOption: {
+        en: '— Select an example to load —',
+        es: '— Selecciona un ejemplo para cargar —'
+    },
     analysisTitleLabel: {
         en: 'Analysis Title (Optional)',
         es: 'Título del Análisis (Opcional)'

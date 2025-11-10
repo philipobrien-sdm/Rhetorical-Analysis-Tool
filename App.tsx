@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { ArticleInputForm } from './components/ArticleInputForm';
 import { AnalysisDisplay } from './components/AnalysisDisplay';
@@ -10,6 +11,7 @@ import { analyzeText } from './services/geminiService';
 import { getHistory, addAnalysis, updateAnalysisName, deleteAnalysis } from './services/historyService';
 import { getUserProfile } from './services/userService';
 import { translations } from './services/i18n';
+import { examples } from './services/exampleData';
 
 import type { AnalysisResult, HistoryEntry, UserProfile } from './types';
 
@@ -139,6 +141,17 @@ function App() {
     });
   };
 
+  const handleLoadExample = (exampleName: string) => {
+    if (!exampleName) {
+      return;
+    }
+    const example = examples.find(e => e.name === exampleName);
+    if (example) {
+      setText(example.content);
+      setTitle(example.title);
+    }
+  };
+
 
   return (
     <div className="bg-slate-900 text-slate-200 min-h-screen font-sans">
@@ -174,6 +187,7 @@ function App() {
                 setText={setText}
                 title={title}
                 setTitle={setTitle}
+                onExampleLoad={handleLoadExample}
                 t={t}
               />
             </>
