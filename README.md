@@ -1,4 +1,3 @@
-
 # Rhetorical Analysis AI
 
 **Uncover the art of persuasion in any text.**
@@ -54,43 +53,48 @@ Follow these steps to download the code and run your own instance of the applica
 2.  In the dropdown menu, select **"Download ZIP"**.
 3.  Save the ZIP file to your computer and unzip it. You will now have a folder named something like `rhetorical-analysis-ai-main`.
 
-### Step 2: Prepare the Files for AI Studio
+### Step 2: Prepare the ZIP for AI Studio
 
-Google AI Studio requires a specific ZIP file format. You must re-zip only the essential application files, **not** the parent folder.
+This is the most important step. AI Studio requires the `index.html` file to be at the top level of the zip file, but the GitHub download puts it inside a folder. You must re-zip the core files.
 
-1.  Open the unzipped folder (e.g., `rhetorical-analysis-ai-main`).
-2.  Select **only** the following files and folders:
-    *   `index.html`
-    *   `index.tsx`
-    *   `index.css`
-    *   `App.tsx`
-    *   `types.ts`
-    *   `metadata.json`
-    *   `components` (the entire folder)
-    *   `services` (the entire folder)
-3.  With these items selected, right-click and choose:
+1.  **Open the folder.** Navigate *inside* the unzipped `rhetorical-analysis-ai-main` folder. You should see all the project files and folders (`index.html`, `App.tsx`, `components`, etc.).
+2.  **Select the application files.** Select all the files and folders *inside this directory* that are needed for the app.
+    *   **Include:**
+        *   `App.tsx`
+        *   `components/` (folder)
+        *   `index.css`
+        *   `index.html`
+        *   `index.tsx`
+        *   `manifest.json`
+        *   `metadata.json`
+        *   `services/` (folder)
+        *   `types.ts`
+        *   `README.md`
+    *   **Do not** go back up and select the parent folder. Stay *inside* the `rhetorical-analysis-ai-main` folder.
+3.  **Create the new ZIP file.** With all the app files selected, right-click and choose:
     *   **Windows:** "Send to" > "Compressed (zipped) folder".
-    *   **Mac:** "Compress X items".
-4.  Rename the new ZIP file to something memorable, like `Rhetorical-Analysis-AI-for-Upload.zip`.
+    *   **Mac:** "Compress [X] items".
+4.  Rename the new ZIP file to something clear, like `aistudio-rhetorical-analysis-upload.zip`.
 
-> **⚠️ Important:** Do not zip the parent folder. The `index.html` file and other items must be at the root level inside the ZIP file you create.
+> **CRITICAL:** By zipping the contents directly, you ensure that `index.html` is at the root of your new zip file, which is what AI Studio needs.
 
-### Step 3: Create and Configure Your AI Studio App
+### Step 3: Upload and Run in AI Studio
 
-1.  Go to the [Google AI Studio App Gallery](https://aistudio.google.com/app).
-2.  Click **"Create new"** and select **"Zip upload"**.
-3.  Upload the `Rhetorical-Analysis-AI-for-Upload.zip` file you created in the previous step. AI Studio will build the project.
-4.  Once the project is loaded, locate the **"Secrets"** panel on the left-hand side (it looks like a key icon 🔑).
-5.  Click **"Add new secret"**.
+1.  **Go to the Google AI Studio App Gallery:** Open your web browser and navigate to [aistudio.google.com/app](https://aistudio.google.com/app).
+2.  **Create a New App:** Click **"Create new"** and select **"Zip upload"**.
+3.  **Upload Your ZIP:** Select the `aistudio-rhetorical-analysis-upload.zip` file you created in the previous step. AI Studio will build the project and launch the application.
+4.  **Add Your API Key:**
+    *   Once the project is loaded, locate the **"Secrets"** panel on the left-hand side (it looks like a key icon 🔑).
+    *   Click **"Add new secret"**.
     *   For the **Name**, enter `API_KEY` (this must be exact).
     *   For the **Value**, paste the Gemini API key you obtained in the Prerequisites step.
     *   Click **Save**.
 
-Your application is now set up! You can run it, test it, and share it using the options provided by AI Studio.
+Your application is now set up and ready to use! You can run it, test it, and share it using the options provided by AI Studio.
 
 ## 📖 Basic Usage
 
-1.  **Input Text:** Either paste text directly into the text area or, if using as an extension, click "Analyze Current Page".
+1.  **Input Text:** Either paste text directly into the text area or use one of the provided examples from the dropdown.
 2.  **Analyze:** Click "Run Generic Analysis" to start.
 3.  **Explore:** Use the tabs to view the analysis from different perspectives.
 4.  **Rewrite:** Navigate to the "Sculpt & Rewrite" tab to experiment with generative text rewriting.
