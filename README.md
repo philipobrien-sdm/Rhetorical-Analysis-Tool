@@ -1,36 +1,15 @@
 # Rhetorical Analysis AI
 
-**Uncover the art of persuasion in any text.**
+## What is this Tool?
 
-Rhetorical Analysis AI is a powerful web application and browser extension that acts as a pair of "X-ray glasses" for text. It uses the Google Gemini API to dissect articles, speeches, or conversations, revealing the hidden machinery of persuasion. Instead of just telling you *what* a text says, this tool shows you *how* it's working to influence your opinion, fostering critical thinking and media literacy.
+Rhetorical Analysis AI is a powerful tool designed to help you look "under the hood" of any text. It uses Google's Gemini AI to analyze how an argument is constructed, revealing the persuasive techniques, logical structures, and potential biases at play. Its goal is to foster critical thinking by showing you how a text works to convince you, not just what it says.
 
-![Rhetorical Analysis AI Interface Showcase](https://storage.googleapis.com/aistudio-o-prd-public-visual-assets/readme_images/rhetorical-analysis-showcase.png)
+## Core Features
 
----
-
-## ✨ Key Features
-
-*   **Comprehensive Rhetorical Analysis:** Identifies persuasive techniques (Metaphor, Anaphora, etc.) and logical fallacies (Ad Hominem, Straw Man, etc.) with verbatim examples from the text.
-*   **Multiple Analytical Perspectives:** Presents the analysis through different "lenses":
-    *   **Annotated Text:** Interactively highlights rhetorical devices directly in the original text.
-    *   **Detailed Analysis:** An in-depth, expert-level breakdown.
-    *   **For Students:** A simplified, engaging summary for younger learners.
-    *   **Plain Language:** A clear, jargon-free version for the average reader.
-    *   **Neurodivergent-Friendly:** A literal interpretation that explains unspoken social cues and non-literal language.
-*   **Conversation Heatmap:** For dialogues, it generates a color-coded visualization to show where the rhetorical and emotional intensity rises and falls.
-*   **Text Sculptor & Rewriter:** A generative AI feature to rewrite the original text by adjusting its tone (professionalism, emotionality) or by providing a "what if" scenario for conversations.
-*   **Optional Personalization:** Users can optionally provide a demographic profile (stored locally) to receive feedback on how the text's rhetoric might specifically affect them.
-*   **Browser Extension Mode:** Analyze any webpage with the click of a button.
-*   **History & Export:** Automatically saves every analysis to local history and allows exporting a full, self-contained HTML report.
-
-## ⚙️ How It Works
-
-The application is built with **React** and **TypeScript**. Its core intelligence comes from the **Google Gemini API**.
-
--   **Analysis:** A sophisticated, multi-part prompt is sent to the `gemini-2.5-pro` model, requesting a structured JSON output that contains the entire analysis.
--   **Rewriting:** Simpler generative tasks are handled by the faster `gemini-2.5-flash` model.
-
-All user data, including analysis history and optional personalization profiles, is stored **exclusively in the user's browser local storage**.
+*   **Detailed Analysis:** A comprehensive breakdown of the text's thesis, key claims, persuasive techniques, and logical fallacies, complete with a "Rhetorical Heat" score and an interactive heat bar.
+*   **Multiple Perspectives:** Special tabs translate the analysis into simple terms for students, plain language for the average adult, and a neurodivergent-friendly format that uses literal language to explain social cues.
+*   **Conversation Heatmap:** If the text is a dialogue, the tool generates a visual heatmap to show where the conversation's intensity and persuasive pressure change.
+*   **Sculpt & Rewrite:** A generative feature that lets you rewrite the original text by adjusting sliders for tone, emotionality, and style.
 
 ---
 
@@ -65,7 +44,6 @@ This is the most important step. AI Studio requires the `index.html` file to be 
         *   `index.css`
         *   `index.html`
         *   `index.tsx`
-        *   `manifest.json`
         *   `metadata.json`
         *   `services/` (folder)
         *   `types.ts`
@@ -90,22 +68,25 @@ This is the most important step. AI Studio requires the `index.html` file to be 
     *   For the **Value**, paste the Gemini API key you obtained in the Prerequisites step.
     *   Click **Save**.
 
-Your application is now set up and ready to use! You can run it, test it, and share it using the options provided by AI Studio.
+Your application is now set up and ready to use!
 
-## 📖 Basic Usage
+## 📖 How to Use This Tool
 
-1.  **Input Text:** Either paste text directly into the text area or use one of the provided examples from the dropdown.
-2.  **Analyze:** Click "Run Generic Analysis" to start.
-3.  **Explore:** Use the tabs to view the analysis from different perspectives.
-4.  **Rewrite:** Navigate to the "Sculpt & Rewrite" tab to experiment with generative text rewriting.
+1.  **Get Your Text:** Copy and paste any text (at least 200 characters) directly into the text area. You can also use the "Load an Example" dropdown to get started quickly.
+2.  **Analyze:** Give your analysis an optional title and click the **"Run Generic Analysis"** button. The AI will process the text and generate a multi-tabbed report.
+3.  **Explore the Report:** Use the tabs to explore the different analysis views, from the in-depth technical breakdown to the simplified explanations.
+
+## Important Limitations: What This Tool Does NOT Do
+
+*   **It is NOT a fact-checker.** The tool analyzes the structure and style of an argument, not the truthfulness of its claims. A well-argued piece can still contain factual errors, and a poorly argued one may be factually correct.
+*   **The AI is not infallible.** While powerful, the AI can make mistakes, misinterpret nuance, or miss certain techniques. Use its analysis as a starting point for your own critical thinking, not as a final, definitive judgment.
+*   **Context is key.** The tool analyzes the text you provide in isolation. The broader context of who the author is, where it was published, and the ongoing cultural conversation is something you must still consider.
+
+## Our Goal
+
+The purpose of this tool is to empower you with the skills of critical consumption. By making the machinery of persuasion visible, we hope to help you become a more discerning reader, a more effective communicator, and a more engaged citizen.
 
 ## 🔒 Privacy
 
--   **API Key:** Your API key is managed securely by Google AI Studio's secrets manager and is never exposed in the client-side code.
--   **User Data:** The optional user profile and all analysis history are stored **only** in your browser's local storage. This data is never transmitted to any server, except when you initiate a personalized analysis, where the profile is sent temporarily to the Gemini API for that single request.
-
-## ⚖️ Disclaimer
-
-This tool is designed to be an educational aid for fostering critical thinking.
--   **It is NOT a fact-checker.** It analyzes *how* an argument is made, not whether its claims are true.
--   **The AI is not infallible.** Use its analysis as a starting point for your own judgment, not as a definitive verdict.
+*   **API Key:** Your API key is managed securely by Google AI Studio's secrets manager and is never exposed in the client-side code.
+*   **User Data:** The optional user profile and all analysis history are stored **only** in your browser's local storage. This data is never transmitted to any server, except when you initiate a personalized analysis, where the profile is sent temporarily to the Gemini API for that single request.
