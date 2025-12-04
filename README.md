@@ -6,6 +6,14 @@ Rhetorical Analysis AI is a powerful tool designed to help you look "under the h
 
 ## Core Features
 
+<img width="600" height="300" alt="Screenshot 2025-12-04 145013" src="https://github.com/user-attachments/assets/387ce87a-d5ac-4f0e-afe4-bf04dd9eac87" />
+<img width="600" height="300" alt="Screenshot 2025-12-04 145144" src="https://github.com/user-attachments/assets/b174f846-23ec-4961-831b-4a054a485f65" />
+<img width="600" height="400" alt="Screenshot 2025-12-04 145219" src="https://github.com/user-attachments/assets/647e8106-a145-46d6-af4a-1212fc10d64b" />
+<img width="600" height="400" alt="Screenshot 2025-12-04 145204" src="https://github.com/user-attachments/assets/8781ea35-afef-4fa1-840e-81573dc461f0" />
+<img width="600" height="400" alt="Screenshot 2025-12-04 145243" src="https://github.com/user-attachments/assets/c45c0561-c3a9-439b-a7e6-31017bb0aa80" />
+<img width="600" height="400" alt="Screenshot 2025-12-04 145231" src="https://github.com/user-attachments/assets/f1707b1f-8eb6-4536-b952-44d79bb806fc" />
+
+
 *   **Detailed Analysis:** A comprehensive breakdown of the text's thesis, key claims, persuasive techniques, and logical fallacies, complete with a "Rhetorical Heat" score and an interactive heat bar.
 *   **Multiple Perspectives:** Special tabs translate the analysis into simple terms for students, plain language for the average adult, and a neurodivergent-friendly format that uses literal language to explain social cues.
 *   **Conversation Heatmap:** If the text is a dialogue, the tool generates a visual heatmap to show where the conversation's intensity and persuasive pressure change.
